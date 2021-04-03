@@ -29,7 +29,7 @@ SECRET_KEY = 'fwndan^tb3&5x4wy$@mnir#2^e_!sayl1(9lcvfkwij*m3^m^8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 ]
 
 MIDDLEWARE = [
@@ -131,13 +130,9 @@ MESSAGE_TAGS = {
     messages.ERROR : 'danger'
 }
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'static/'),
-)
 
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
