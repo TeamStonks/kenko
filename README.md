@@ -1,6 +1,6 @@
 # kenko
 
-kenko, where we give out knowldge on how we can have a satisfactory life while Working From Home (WFH). This website will talk about how we can help you have a succesful stay while working at your home.
+kenko, where we give out knowledge on how we can have a satisfactory life while Working From Home (WFH). This website will talk about how we can help you have a successful stay while working at your home.
 
 ## This includes:
 1. Meditation
@@ -17,3 +17,4 @@ Sleep schedules are crucial to your health, this page discusses how and why you 
 Now this is an interesting topic, working out! Working out can help you in many ways like: staying in a good shape, not having any diseases when becoming older, and overall just being active.
 
 Website: http://143.198.13.69:6969/
+Video: https://vimeo.com/532883950
