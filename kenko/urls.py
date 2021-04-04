@@ -8,4 +8,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('workout/', include('workout.urls')),
     path('meditation/', include('meditation.urls')),
+    path('sleep-schedule/', include('sleepschedule.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
