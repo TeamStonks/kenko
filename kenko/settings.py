@@ -29,7 +29,7 @@ SECRET_KEY = 'fwndan^tb3&5x4wy$@mnir#2^e_!sayl1(9lcvfkwij*m3^m^8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','kenko-wfm.herokuapp.com']
 
 
 # Application definition
@@ -79,18 +79,8 @@ WSGI_APPLICATION = 'kenko.wsgi.application'
 
 DATABASES = {
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': os.getenv('DATABASE_NAME'),
-
-        'USER': os.getenv('DATABASE_USER'),
-
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-
-        'HOST': os.getenv('DATABASE_HOST'),
-
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -133,8 +123,10 @@ MESSAGE_TAGS = {
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-
+ 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
