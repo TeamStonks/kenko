@@ -6,42 +6,28 @@
             {% load static %}
             <div class="container d-flex h-100 align-items-center">
                 <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Kenko</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">How we can prioritize our needs to help others have a satisfactory life.</h2>
-                    <a class="btn btn-primary js-scroll-trigger" href="#about">Learn more</a>
+                    <h1 class="mx-auto my-0 text-uppercase">Meditate</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Meditation is both a skill and an experience that can positively impact your overall health and happiness.</h2>
                 </div>
             </div>
         </header>
-        <!-- About-->
-        <section class="about-section text-center" id="about">
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="text-white mb-4">What is Working From Home (WFH)</h2>
-                        <p class="text-white-50">
-                            Work from home describes work being done remotely, instead of at an office. The acronym “WFH” is used as a nickname for the concept.
-                            Many organizations transitioned their employees from the office to a work from home model during the 
-                            <a href="https://globalpandemic.net/">Coronavirus global pandemic</a>
-                            .
-                        </p>
-                    </div>
+                    {% for key,value in types.items %}
+                        <div class="col-sm-6 my-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{value.0}}</h5>
+                                    <p class="card-text">{{value.1}}</p>
+                                    <a href="/meditation/{{key}}" class="btn btn-primary">Visit</a>
+                                </div>
+                            </div>
+                        </div>    
+                    {% endfor %}
                 </div>
-                <img class="img-fluid" src="{% static 'assets/img/ipad.png' %}" alt="" />
             </div>
-        </section>
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
-            <div class="container">
-                <!-- Featured Project Row-->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/bg-masthead.jpg' %}" alt="" /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>How to WFH successfully</h4>
-                            <p class="text-black-50 mb-0">Traditionally, work is done in an office. A business functions in a physical workspace and work-related tasks are completed by employees at the office itself. This is changing with the progression of digital transformation. As software capabilities become more complex, and business processes come to rely on them more, companies are finding that many of their employees are no longer bound by a physical workplace in order to work efficiently. Instead, telecommuting, or working from home, can be just as efficient.</p>
-                        </div>
-                    </div>
-                </div>
                 <!-- Project One Row-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                     <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/demo-image-01.jpg' %}" alt="" /></div>
